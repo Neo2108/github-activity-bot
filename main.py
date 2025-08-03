@@ -3,7 +3,7 @@ from datetime import datetime
 
 FILENAME = "daily.js"
 
-# Append a comment with timestamp
+# Append a comment with timestamp as "commit made on YYYY-MM-DDTHH:MM:SSZ"
 with open(FILENAME, "a") as f:
     f.write(f"// Commit made on {datetime.utcnow().isoformat()} UTC\n")
 
