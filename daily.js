@@ -1,1 +1,1 @@
-// daily commit log
+// starting point
