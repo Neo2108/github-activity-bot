@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '35 8 * * *'  # 4:35 AM Toronto time
+    - cron: '58 8 * * *'  # 4:35 AM Toronto time
   workflow_dispatch:
 
 jobs:
