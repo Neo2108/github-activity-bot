@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # 8:00 AM UTC daily or 4:00 AM EDT
+    - cron: '*/1 * * * *'  # 8:00 AM UTC daily or 4:00 AM EDT
   workflow_dispatch:
 
 jobs:
@@ -18,8 +18,8 @@ jobs:
       - name: Make commit
         run: |
           echo "// Ping at $(date -u)" >> daily.js
-          your-username@users.noreply.github.com
-          Neo2108@users.noreply.github.com
+          git config --global user.name "Neo2108"
+          git config --global user.email "Neo2108@users.noreply.github.com"
           git add daily.js
           git commit -m "Daily commit: $(date -u)" || echo "No changes made"
           git push || echo "No push needed"
