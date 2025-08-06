@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # 8:00 AM UTC daily or 4:00 AM EDT
+    - cron: '0 12 * * *'  # 12:00 AM UTC daily or 8:00 AM EDT
   workflow_dispatch:
 
 jobs:
