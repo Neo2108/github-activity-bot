@@ -18,8 +18,9 @@ jobs:
       - name: Make commit
         run: |
           echo "// Ping at $(date -u)" >> daily.js
-          git config --global user.name "Neo2108"
-          git config --global user.email "Neo2108@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          
           git add daily.js
           git commit -m "Daily commit: $(date -u)" || echo "No changes made"
           git push || echo "No push needed"
