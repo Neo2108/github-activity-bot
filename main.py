@@ -1,7 +1,7 @@
 import subprocess
 from datetime import datetime
 
-FILENAME = "daily.js"
+FILENAM = "daily.js"
 
 # Append a comment with timestamp as "commit made on YYYY-MM-DDTHH:MM:SSZ"
 with open(FILENAME, "a") as f:
